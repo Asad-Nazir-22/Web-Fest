@@ -18,7 +18,10 @@
   <body>
     <div class="formCont">
       <div class="left">
-        <h1><span class="commas">"</span>We Welcome to you the Future of learning<span class="commas">"</span></h1>
+        <h1>
+          <span class="commas">"</span>We Welcome to you the Future of
+          learning<span class="commas">"</span>
+        </h1>
       </div>
 
       <div class="right">
@@ -27,7 +30,7 @@
             <img src="./Images/logo.png" alt="" />
             <h1>SmartEd</h1>
           </div>
-          <form>
+          <form onsubmit="return verify()">
             <h1>Sign up</h1>
             <div class="loginFields">
               <label for="email">Username</label>
@@ -39,33 +42,88 @@
             </div>
             <div class="loginFields">
               <label for="username">Institution Name</label>
-              <input type="text" id="username" name="username" />
+              <input type="text" id="institution" name="username" />
             </div>
             <div class="loginFields">
-              <label for="pass">Password</label>
-              <input type="text" id="pass" name="password" />
-            </div>
-            <div class="loginFields">
-              <label for="confirmPass">Confirme Password</label>
-              <input type="text" id="confirmPass" name="password" />
+              <label for="pass"
+                >Password &nbsp; <span class="Error"></span
+              ></label>
+              <input type="password" id="pass" class="pass" name="password" />
             </div>
             <div>
+              <input id="showPass"  type="checkbox" />
+              <label>Show password</label>
+            </div>
+            <div class="loginFields">
+              <label for="confirmPass"
+                >Confirm Password <span class="Error"></span
+              ></label>
               <input
-                type="checkbox"
-              >
-              <label>Check this if You are Instructor</label
-              >
+                type="password"
+                id="confirmPass"
+                class="pass"
+                name="password"
+              />
+            </div>
+            <div>
+              <input type="checkbox" />
+              <label>Check this if You are Instructor</label>
             </div>
 
             <div class="btn">
               <button class="" type="submit">Login</button>
             </div>
             <div class="links">
-               Alraedy a Part Wonderful!&nbsp; <a href="#">Login here</a>
+              Alraedy a Part Wonderful!&nbsp; <a href="#">Login here</a>
             </div>
           </form>
         </div>
       </div>
     </div>
+
+    <script>
+      const pass = document.getElementsByClassName("pass");
+      const error = document.getElementsByClassName("Error");
+
+      let Showpass = document.querySelector("#showPass");
+
+      Showpass.addEventListener("click", () => {
+        if (pass[0].type == "password") {
+          pass[0].type = "text";
+          pass[1].type = "text";
+        } else {
+          pass[0].type = "password";
+          pass[1].type = "password";
+        }
+      });
+
+      pass[0].addEventListener("focusout", () => {
+        if (pass[0].value.length < 8) {
+          error[0].textContent = "Atleast 8 character Long";
+          pass[0].style.borderColor = "red";
+          console.log("here");
+          return;
+        }
+
+        error[0].textContent = "";
+        pass[0].style.borderColor = "";
+      });
+
+      function verify() {
+        //On Submission
+        if (pass[0].value.length < 8) {
+          return false;
+        }
+
+        if (pass[0].value == pass[1].value) {
+          pass[1].style.borderColor = "";
+          return true;
+        }
+
+        error[1].textContent = "(Wrong Password)";
+        pass[1].style.borderColor = "red";
+        return false;
+      }
+    </script>
   </body>
 </html>

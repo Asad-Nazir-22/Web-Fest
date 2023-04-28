@@ -151,10 +151,15 @@ body {
     font-weight: bolder;
 }
 
-.Error
+/* .Error
 {
     position: Fixed;
     width: 100%;
+} */
+
+.Error
+{
+    color: red;
 }
 
 @media screen and (max-width: 600px) {
