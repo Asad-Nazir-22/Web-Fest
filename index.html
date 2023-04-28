@@ -10,14 +10,43 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/form.css" />
     <title>Smart Ed | Login</title>
   </head>
   <body>
+    <div class="alert alert-warning Error alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those
+      fields below.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
     <div class="formCont">
       <div class="left">
-        <h1><span class="commas">"</span>Welcome to to Smart Ed Era of Smart Learning<span class="commas">"</span></h1>
+        <h1>
+          <span class="commas">"</span>Welcome to to Smart Ed Era of Smart
+          Learning<span class="commas">"</span>
+        </h1>
       </div>
 
       <div class="right">
@@ -37,19 +66,14 @@
               <input type="text" id="pass" name="password" />
             </div>
             <div class="">
-              <input
-                type="checkbox"
-              >
-              <label>Remember Me</label
-              >
+              <input type="checkbox" />
+              <label>Remember Me</label>
             </div>
 
             <div class="btn">
               <button class="" type="submit">Login</button>
             </div>
-            <div class="links">
-                Become a part <a href="#">Sign Up Now !</a>
-            </div>
+            <div class="links">Become a part <a href="./signup.html">Sign Up Now !</a></div>
           </form>
         </div>
       </div>

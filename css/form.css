@@ -9,6 +9,7 @@
 body {
     font-family: 'Castoro Titling', cursive;
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
 }
 
 .formCont {
@@ -20,13 +21,10 @@ body {
 .left {
     width: 50%;
     background: #373B44;
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.363)), url('../Images/sign in-banner.jpg');
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: grid;
     color: white;
     text-align: center;
-
 }
 
 .left h1 {
@@ -66,7 +64,6 @@ body {
     align-items: center;
     width: clamp(300px, 90%, 400px);
     margin: auto;
-    min-height: 70vh;
 }
 
 
@@ -92,7 +89,9 @@ body {
 
     display: grid;
     width: 50%;
-    
+    overflow-x: auto;
+    padding: 2rem 0rem;
+
 }
 
 .loginFields {
@@ -129,51 +128,54 @@ body {
     border-radius: 5px;
 }
 
-.left{
+.left {
     display: grid;
     place-content: center;
 }
 
-.left h1{
+.left h1 {
     font-size: var(--fs2);
     font-weight: bolder;
     padding: 1rem;
 }
 
-.commas
-{
+.commas {
     font-size: var(--fs1);
 }
 
-.links
-{
+.links {
     margin-top: 2rem;
 }
-.links a
-{
- font-weight: bolder;
+
+.links a {
+    font-weight: bolder;
 }
+
+.Error
+{
+    position: Fixed;
+    width: 100%;
+}
+
 @media screen and (max-width: 600px) {
-   
-    .left{
+
+    .left {
         display: none;
-      
+
     }
-    
-    .right
-    {
+
+    .right {
         padding: 1rem;
         width: 100%;
     }
 
-    .Form{
+    .Form {
         background-color: white;
         padding: 1rem;
         border-radius: 5px;
     }
 
-    .formCont
-    {
+    .formCont {
         background: url('../Images/sign in-banner.jpg');
     }
-  }
+}
