@@ -1,8 +1,14 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Castoro Titling', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Castoro Titling', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .formCont {
@@ -12,16 +18,12 @@
 }
 
 .left {
-    width: 60%;
-    border: 2px solid red;
+    width: 50%;
     background: #373B44;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #373B44);
+    background: linear-gradient(rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0.363)), url('../Images/sign in-banner.jpg');
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: grid;
-
     color: white;
     text-align: center;
 
@@ -33,8 +35,7 @@
 
 }
 
-.SignInAs
-{  
+.SignInAs {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,8 +44,7 @@
     margin: auto;
 }
 
-.SignInAs img
-{
+.SignInAs img {
     display: block;
     padding: 1rem;
     width: 90%;
@@ -53,8 +53,7 @@
     border-radius: 50%;
 }
 
-.SignInAs .img
-{
+.SignInAs .img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,71 +62,64 @@
     font-size: var(--fs4);
 }
 
-.Form
-{
+.Form {
     align-items: center;
-    width: clamp(100px,70%,900px);
-    margin:auto;
+    width: clamp(300px, 90%, 400px);
+    margin: auto;
     min-height: 70vh;
-    border: 2px solid red;
 }
 
-.logo
-{
+
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.logo img
-{
+.logo img {
     display: flex;
     align-items: center;
-    width: clamp(2rem, 10vw,4rem);
+    width: clamp(2rem, 10vw, 4rem);
     margin-right: 1rem;
 }
 
-.logo h1{
+.logo h1 {
     font-size: var(--fs2);
 }
 
-.right{
-   
+.right {
+
     display: grid;
-    width: 40%;
+    width: 50%;
+    
 }
 
-.loginFields
-{
+.loginFields {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
 }
 
-.loginFields input
-{
-  padding: 0.5rem;
+.loginFields input {
+    padding: 0.5rem;
 }
 
-.loginFields label
-{
- font-size: var(--fs4);
+.loginFields label {
+    font-size: var(--fs4);
 }
 
-.loginFields input[type="checkbox"]
-{
+.loginFields input[type="checkbox"] {
     width: 1rem;
     height: 1rem;
 }
 
-.btn
-{
+.btn {
     width: 100%;
 }
-.btn button
-{
-    outline:none;
+
+.btn button {
+    outline: none;
     border: none;
     padding: 0.8rem 4rem;
     background-color: #4286f4;
@@ -135,5 +127,53 @@
     font-weight: 500;
     font-size: var(--fs4);
     border-radius: 5px;
-    
 }
+
+.left{
+    display: grid;
+    place-content: center;
+}
+
+.left h1{
+    font-size: var(--fs2);
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+.commas
+{
+    font-size: var(--fs1);
+}
+
+.links
+{
+    margin-top: 2rem;
+}
+.links a
+{
+ font-weight: bolder;
+}
+@media screen and (max-width: 600px) {
+   
+    .left{
+        display: none;
+      
+    }
+    
+    .right
+    {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .Form{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .formCont
+    {
+        background: url('../Images/sign in-banner.jpg');
+    }
+  }

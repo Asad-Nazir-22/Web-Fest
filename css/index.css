@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Open+Sans&display=swap');
 .ltheme_body {
     --background-primary: hsl(0, 0%, 100%);
     --background-secondary: hsl(0, 0%, 95%);
@@ -28,3 +29,4 @@
     --fs5: clamp(0.8rem, 0.92vw, 1.2rem);
     --pdlr: clamp(0.5rem, 15vw, 12rem);
 }
+
